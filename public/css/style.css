@@ -16,6 +16,14 @@ a{
     color: #333;
 }
 
+.line{
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgb(8, 8, 8);
+    height: 1px;
+    margin-top: 50px;;
+}
+
 /* Nav */
 
 #nav{
@@ -158,3 +166,59 @@ a{
     color:rgb(243, 97, 30)
 }
 
+
+/* Dashboard */
+
+/*header*/
+#deashboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-header{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.dashboard-title h2{
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.dashboard-btn-box{
+    padding-top: 40px;
+}
+
+.dashboard-btn{
+    border: none;
+    background-color: transparent;
+    border: 1px #333 solid;
+    border-radius: 20px;
+    padding: 5px 50px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dashboard-btn:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* No posts message*/
+.no-posts-box{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color:rgb(238, 234, 234);
+    font-weight: lighter;
+    font-style: italic;
+    padding-top: 20px;
+    font-size: 17px;
+    font-family: monospace;
+}
