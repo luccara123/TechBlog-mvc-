@@ -1,0 +1,160 @@
+/* General styles*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    background: linear-gradient(to bottom, rgb(255, 145, 0), rgb(255, 38, 0));
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* Nav */
+
+#nav{
+    display: flex; 
+   justify-content: space-around;
+   padding: 15px 0;
+   position: static;
+ }
+
+#nav a{
+    color:  #333;
+    text-decoration: none;
+    font-size: 19px;
+    padding-bottom: 4px;
+}
+
+#nav a:hover{
+    border-bottom: 2px #333 solid;
+}
+
+#nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 18px;
+}
+
+#nav h2{
+    color: rgb(0, 0, 0);
+}
+
+/*boxes*/
+
+#posts-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.post-box{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    margin-top: 40px;
+}
+ /* Post title*/
+.post-title{
+    padding-bottom: 20px;
+    background-color: #333;
+    padding: 20px;
+}
+
+.post-title h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+/* Post content */
+.post-content{
+    padding: 20px;
+}
+
+.post-info{
+    padding: 8px 20px;
+    color: rgb(133, 132, 132);
+}
+
+#footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    height: 60px;
+}
+
+
+/* Login and Sign up*/
+
+#form-container{
+    background-color: #fff;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 6%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 20px;;
+}
+
+.form-title{
+    padding-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #333;
+}
+
+.form-input{
+    width: 300px;
+    margin-top: 40px;
+}
+
+.form-box input[type="email"], input[type="password"],input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: #333 1px solid;
+    font-size: 16px;
+    outline: none;
+    color:  #333;
+}
+
+#login-submit{
+   padding-top: 100px;
+}
+
+.submitBtn{
+    border: none;
+    background-color: rgb(255, 81, 0);
+    padding: 4px 30px;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.submitBtn:hover{
+    background-color: rgb(255, 106, 0);
+}
+
+.link a{
+    color:rgb(243, 97, 30)
+}
+
