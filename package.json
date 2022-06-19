@@ -4,7 +4,8 @@
   "description": "TechBlog is a website where you can make posts about the tech world and read comments.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.20.1"
+    "sequelize": "^6.20.1",
+    "session": "^0.1.0"
   }
 }

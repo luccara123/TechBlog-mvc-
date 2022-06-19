@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 // get all
 router.get('/', (req, res) => {
     Post.findAll({
-    attributes: ['id', 'title', 'content', 'created_at'],
+    attributes: ['id', 'post_title', 'post_content', 'created_at'],
       order: [['created_at', 'DESC']],
       include: [
         { model: User, attributes: ['username'] },
@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
       where: { id: req.params.id },
       attributes: [
         'id',
-        'title',
+        'post_title',
         'created_at',
         'post_content'
       ],
@@ -70,7 +70,7 @@ router.get('/:id', (req, res) => {
 //post data view in insomnia
 router.post('/', withAuth, (req, res) => {
     Post.create({
-      title: req.body.title,
+      post_title: req.body.post_title,
       post_content: req.body.post_content,
       user_id: req.session.user_id
     })
@@ -85,7 +85,7 @@ router.post('/', withAuth, (req, res) => {
 //Update 
 router.put('/:id', withAuth, (req, res) => {
     Post.update({
-        title: req.body.title,
+        title: req.body.post_title,
         post_content: req.body.post_content
       },
       {

@@ -20,7 +20,11 @@ router.get('/', (req, res) => {
                 }
             ]
         })
-        .then(response => res.json(response))
+        .then(response => {
+            const posts = response.map(post => post.get({ plain: true }));
+            res.render('mainPage', 
+            { posts, loggedIn: req.session.loggedIn });
+        })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
