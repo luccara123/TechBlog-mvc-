@@ -70,4 +70,39 @@ router.get('/edit/:id', withAuth, (req, res) => {
         });
 })
 
+router.get('/create/', withAuth, (req, res) => {
+    Post.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      attributes: [
+        'id',
+        'post_title',
+        'post_content'
+      ],
+      include: [
+        {
+          model: Comment,
+          attributes: ['id', 'comment_content', 'post_id', 'user_id',],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(response => {
+        const posts = response.map(post => post.get({ plain: true }));
+        res.render('newPost', { posts, loggedIn: true });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 module.exports = router;

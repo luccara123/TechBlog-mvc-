@@ -7,14 +7,32 @@
                 </div>
     
                 <div class="dashboard-btn-box">
-                    <input type="button" id= "create-post" class="dashboard-btn" value="CREATE POST"/>
+                     <a href="/dashboard/create/"> <button id="create-post" class="dashboard-btn" value="CREATE POST">CREATE POST</button></a>
                 </div>
 
                 <div class="line"></div>
             </div>
+            {{#if posts.length}}
+           <div >
 
-            <!-- No posts message-->
+       {{#each posts as |post|}}
+        {{> postBox post}}
+            <div class="edit-box">
+                 <a href="/dashboard/edit/{{post.id}}"> <button class="editBtn"><i class="fa-solid fa-pen-to-square"></i></button></a>
+            </div>
+        {{/each}}
+
+        {{else}}
+  <!-- No posts message-->
             <div class="no-posts-box">
                 <h4 class="no-posts"> You have no posts</h4>
             </div>            
-        </main>
+            </div>
+
+          {{/if}}
+      
+       </main>
+
+<script src="https://kit.fontawesome.com/2d9e8320eb.js" crossorigin="anonymous"></script>
+
+
