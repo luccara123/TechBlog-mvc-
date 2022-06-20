@@ -24,7 +24,11 @@ router.get('/', withAuth, (req, res) => {
                 }
             ]
         })
-        .then(response => res.json(response))
+        .then(response => {
+            const posts = response.map(post => post.get({ plain: true }));
+            res.render('dashboard',
+             { posts, loggedIn: true });
+        })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);

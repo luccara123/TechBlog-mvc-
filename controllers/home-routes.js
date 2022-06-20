@@ -55,15 +55,40 @@ router.get('/post/:id', (req, res) => {
         .then(response => {
             if (!response) {
                 res.status(404).json({
-                    message: ''
+                    message: 'No posst found!!!'
                 });
                 return;
             }
+
+            const post = response.get({ plain: true });
+
+           res.render('onePost', {
+             post,
+            loggedIn: req.session.loggedIn
+           });
         })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
+});
+
+// Login route
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
+// SignUp route
+router.get('/signUp', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('signUp');
 });
 
 module.exports = router;
