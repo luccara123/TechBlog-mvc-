@@ -20,7 +20,7 @@ async function createPost(e) {
     } else {
       alert(response.statusText);
     }
-  };
+};
   
 const addPostBtn = document.querySelector('.create-post-form');
 addPostBtn.addEventListener('submit', createPost);

@@ -1,0 +1,25 @@
+<!-- First, we add the post -->
+{{> postBox posts}}
+<!-- Them, prints the comments -->
+{{> comments posts.comments}}
+
+<!-- If logged in, the user can add comments -->
+{{#if loggedIn}}
+    <section class="add-comments-container">
+        <form class="add-comments-form">
+            <div>
+                <textarea class="comment-textarea" name="added-comment"></textarea>
+            </div>
+
+             <div class="addCommentBox">
+                  <button class="addCommentBtn" type="submit">
+                    ADD COMMENT
+                   </button>
+              </div>
+        </form>
+    </section>
+{{/if}}
+
+{{#if loggedIn}}
+<script src="/javascript/addcomment.js"></script>
+{{/if}}

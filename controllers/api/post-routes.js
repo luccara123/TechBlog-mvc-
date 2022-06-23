@@ -67,7 +67,7 @@ router.get('/:id', (req, res) => {
       });
 });
 
-//post data view in insomnia
+
 router.post('/', withAuth, (req, res) => {
     Post.create({
       post_title: req.body.post_title,

@@ -1,0 +1,13 @@
+<div class="comments-container"> <!--Container with all the comments-->
+    {{#each this }}
+         <!-- Each comment box-->
+        <div class="comment-box">
+            <div class="comment-info">
+                {{user.username}} on {{created_at}}
+            </div>
+            <div class="comment-content">
+                {{comment_content}}
+            </div>
+        </div>
+    {{/each}}
+</div>

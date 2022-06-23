@@ -15,7 +15,7 @@ async function signUpFunction(e) {
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
-            document.location.replace('/dasboard');
+            document.location.replace('/login');
 
         } else {
             alert(response.statusText);

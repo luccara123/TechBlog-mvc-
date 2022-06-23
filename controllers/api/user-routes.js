@@ -74,7 +74,7 @@ router.post('/login', (req, res) => {
       }
     }).then(response => {
       if (!response) {
-        res.status(400).json({ message: 'No user found with this email address!' });
+        res.status(400).json({ message: 'No user found with this username' });
         return;
       }
   
@@ -95,15 +95,16 @@ router.post('/login', (req, res) => {
     });
 });
 
+
+//Logout
 router.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
+  if (req.session.loggedIn) {
       req.session.destroy(() => {
-        res.status(204).end();
+          res.status(204).end();
       });
-    }
-    else {
+  } else {
       res.status(404).end();
-    }
+  }
 });
 
 module.exports = router;

@@ -1,20 +1,20 @@
-
 <!--Boxes-->
-            <div class="post-box">
-               <!--Box title-->
-                <div class="post-title">
-                    <h3><a href="/posts/{{id}}"> {{ post_title }} </a></h3>
-                </div>
-                <!--Box text content-->
-                <div class="post-content">
-                   {{ post_content}}
-                </div>
-              <!-- Box info-->
-                <div class="post-info">
-                    <p> Posted by:
-                        <span class="post-username"> {{ user.username }} </span>
-                         on 
-                        <span class="post-date"> {{ created_at }}</span>
-                    </p>
-                </div>
-            </div>
+<div class="post-box">
+    <!--Box title-->
+    <div class="post-title">
+        <h3><a href="/posts/{{id}}"> {{ post_title }} </a></h3>
+    </div>
+    <!--Box text content-->
+    <div class="post-content">
+        {{ post_content}}
+    </div>
+    <!-- Box info-->
+    <div class="post-info">
+        <p> Posted by:
+          <span class="post-username"> {{ user.username }} </span>
+            on 
+        <span class="post-date"> {{ created_at }}</span>
+        </p>
+    </div>
+                  
+</div>

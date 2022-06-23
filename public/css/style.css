@@ -8,7 +8,8 @@
 
 body, html{
     background: linear-gradient(to bottom, rgb(255, 145, 0), rgb(255, 38, 0));
-    height: 100%;
+    max-height: 100%;
+    width: 100vw;
 }
 
 a{
@@ -96,8 +97,14 @@ a{
     color: rgb(133, 132, 132);
 }
 
+footer{
+   display: flex;
+   margin-top: 25%;;
+}
+
 #footer{
     margin-top: 100px;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,3 +310,70 @@ a{
 .post-title a{
     color: #fff;
 }
+
+/* Comments Form*/
+.add-comments-container{
+    width: 70%;
+    margin: 50px auto 20px auto;
+    color: #333;
+    
+}
+
+.comment-textarea{
+    width: 100%;
+    height: 100px;
+}
+
+.addCommentBox{
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.addCommentBox:hover{
+    background-color:rgb(65, 65, 65);
+    cursor: pointer;
+}
+
+.add-comments-form button{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 4px 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Comments container*/
+.comments-container{
+    width: 70%;
+    margin: 30px auto 0 auto;
+}
+
+.comment-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20px 0;
+    height: 100px;
+}
+
+.comment-content{
+    padding: 5px 10px 5px 10px;
+}
+
+
+.comment-info{
+    background-color: rgb(90, 89, 89);
+    padding: 20px;
+    color: #fff;
+}
+
