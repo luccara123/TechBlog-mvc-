@@ -63,6 +63,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
                 });
                 return;
             }
+
+            const editPost = response.get({ plain: true });
+            res.render('editPost', { editPost, loggedIn: true });
         })
         .catch(err => {
             console.log(err);

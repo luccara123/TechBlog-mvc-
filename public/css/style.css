@@ -377,3 +377,66 @@ footer{
     color: #fff;
 }
 
+/* Edit post styles*/
+.edit-container{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.edit-container h2{
+    font-size: 40px;;
+}
+
+.edit-form{
+    width: 100%;
+}
+
+.edit-form p{
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.edit-title-box{
+    width: 100%;
+}
+.edit-content-box{
+    width: 100%;
+}
+
+.edit-form input[type="text"], textarea{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.edit-post-input{
+    height: 25px;
+}
+
+.edit-post-textarea{
+    height: 100px;
+}
+
+.editPageBtn{
+    border: none;
+    background-color: transparent;
+    padding: 5px 30px;
+    margin: 20px 15px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.editPageBtn:hover{
+    background-color: #333;
+    color: #fff;
+}
+

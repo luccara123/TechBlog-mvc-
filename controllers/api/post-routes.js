@@ -85,7 +85,7 @@ router.post('/', withAuth, (req, res) => {
 //Update 
 router.put('/:id', withAuth, (req, res) => {
     Post.update({
-        title: req.body.post_title,
+        post_title: req.body.post_title,
         post_content: req.body.post_content
       },
       {

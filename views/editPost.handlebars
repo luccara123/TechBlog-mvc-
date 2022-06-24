@@ -1,0 +1,25 @@
+<div class="edit-container">
+    <h2>Edit post</h2>
+    <div class="line"></div>
+    <form class="edit-form">
+            <!--Edit title-->
+            <div class="edit-title-box">
+                <p>Title</p>
+                <input name="edit-post-title" type="text" 
+                value="{{post.post_title}}" class="edit-post-input"/>
+            </div>
+        <!-- Edit content -->
+            <div class="edit-content-box">
+        <p> Text here </p>
+            <textarea name="edit-post-text" type="text" placeholder="{{ post.post_content }}" class="edit-post-textarea"/></textarea>
+            </div>
+            <!-- Edit btn -->
+            <button type="submit" class="editFinalBtn editPageBtn"> Save changes
+            </button>
+            <!-- Delete btn -->
+            <button type="button" class="deleteBtn editPageBtn" id="deleteBtn">Delete post
+            </button>
+    </form>
+</div>
+
+<script src="/javascript/editPost.js"></script>
