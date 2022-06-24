@@ -103,7 +103,7 @@ footer{
 }
 
 #footer{
-    margin-top: 100px;
+    margin-top: 400px;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -143,7 +143,7 @@ footer{
     margin-top: 40px;
 }
 
-.form-box input[type="email"], input[type="password"] {
+.form-box input[type="text"], input[type="password"] {
     background-color: transparent;
     border: none;
     border-bottom: #333 1px solid;
@@ -166,6 +166,7 @@ footer{
     font-size: 15px;
     border-radius: 15px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .submitBtn:hover{

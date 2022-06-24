@@ -1,3 +1,4 @@
+const { application } = require('express');
 const Sequelize = require('sequelize');
 //Connection with database
 require('dotenv').config();
@@ -10,3 +11,4 @@ const sequelize = process.env.JAWSDB_URL
     });
 
 module.exports = sequelize;
+

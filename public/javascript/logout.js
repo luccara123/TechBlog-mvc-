@@ -9,7 +9,7 @@ async function logout() {
     } else {
       alert(response.statusText);
     }
-  }
+};
   
 const logoutBtn = document.querySelector('#logout')
 logoutBtn.addEventListener('click', logout);
