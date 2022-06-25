@@ -40,3 +40,8 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 Html, Css, Javascript, Express, Handlebars, Mysql2, Express-session
 
 ## Links
+Heroku: https://gentle-atoll-62855.herokuapp.com/
+Github: https://github.com/luccara123/TechBlog-mvc-
+
+## Screenshot
+![image](https://user-images.githubusercontent.com/78193249/175755895-bc81f1fd-c071-4316-9d3e-8bc7e24b0ea8.png)
